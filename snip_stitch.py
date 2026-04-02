@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 
-"""
-Add a snippet to a bash/zsh/... shell rc file
-"""
+"""Manage marked snippets in text files. Snip it in, stitch it out."""
 
 from __future__ import annotations
 
