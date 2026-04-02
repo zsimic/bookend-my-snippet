@@ -25,7 +25,9 @@ uvx --with tox-uv tox -e typecheck
 
 The entire implementation lives in a single file: `snip_stitch.py`. No external runtime dependencies.
 
-**`SnipStitch`** is the core class. Given a `tag`, `target_path`, and `snippet_contents`, it:
+**CLI** uses `argparse` with subcommands: `text`, `file`, `remove`. Content resolution happens in `main()` before anything reaches the class. Module-level globals `DRYRUN` and `VERBOSE` control output behavior.
+
+**`SnipStitch`** is the core class. It takes a `tag`, `target_path`, and pre-resolved `snippet_lines` (list of strings), then:
 1. Reads the existing target file
 2. Parses it into three segments: `before_insertion`, `marked_contents`, `after_insertion`
 3. Detects whether the snippet has changed (idempotency check)
@@ -37,13 +39,6 @@ The entire implementation lives in a single file: `snip_stitch.py`. No external 
 ...snippet lines...
 # -8<--- {tag} -- {end_comment}
 ```
-
-**Snippet sources** resolved in `resolved_snippet_contents()`:
-- `file:<path>` — reads from a file
-- `_empty_` — signals removal of the managed section
-- raw string — used as-is (with `\n` escape expansion)
-
-**`DRYRUN`** is a module-level global set by `--dryrun`/`-n`; when true, the file is not written.
 
 ## Testing
 
