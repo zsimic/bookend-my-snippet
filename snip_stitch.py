@@ -256,5 +256,5 @@ def main():
     ss.run_update(force=args.force)
 
 
-if __name__ == "__main__":  # pragma: no covers
+if __name__ == "__main__":
     sys.exit(main())

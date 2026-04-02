@@ -41,7 +41,7 @@ def last_n_lines(n, text):
 
 
 def test_cli(cli):
-    cli.run("--help")
+    cli.run("--help", main=runez.to_path(cli.project_folder) / "snip_stitch.py")
     assert cli.succeeded
     assert "usage:" in cli.logged.stdout
 

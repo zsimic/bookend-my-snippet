@@ -19,6 +19,9 @@ uvx --with tox-uv tox -e reformat
 
 # Run type checking
 uvx --with tox-uv tox -e typecheck
+
+# Validate README renders correctly for PyPI
+uvx --with tox-uv tox -e readme
 ```
 
 ## Architecture

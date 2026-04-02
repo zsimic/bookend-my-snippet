@@ -38,8 +38,7 @@ Run directly (no install required)::
 
     uvx snip-stitch --help
 
-It can also be ``pip``-installed, or heck you can even just grab the script and run it ad-hoc
-(it uses std lib only).
+It can also be ``pip``-installed, or ran ad-hoc (it uses std lib only).
 
 
 Commands
