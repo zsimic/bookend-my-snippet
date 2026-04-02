@@ -87,15 +87,15 @@ Options go **before** the command::
 
     snip-stitch -n --force text mytag ~/.bashrc 'echo hello'
 
-==================  ====================================================
-``-n, --dryrun``    Show what would happen without modifying the file
-``-v, --verbose``   Print extra detail to stderr
-``-f, --force``     Rewrite even if the managed section hasn't changed
-``--comment-chars`` Comment character(s) for the target file (default: ``#``)
-``--start-comment`` Comment appended to the opening marker line
-``--end-comment``   Comment appended to the closing marker line
-``--snip-marker``   Marker string (default: ``-8<-``)
-==================  ====================================================
+====================  =======================================================
+``-n, --dryrun``      Show what would happen without modifying the file
+``-v, --verbose``     Print extra detail to stderr
+``-f, --force``       Rewrite even if the managed section hasn't changed
+``--comment-chars``   Comment character(s) for the target file (default: ``#``)
+``--start-comment``   Comment appended to the opening marker line
+``--end-comment``     Comment appended to the closing marker line
+``--snip-marker``     Marker string (default: ``-8<-``)
+====================  =======================================================
 
 
 How it works
